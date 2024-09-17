@@ -1,0 +1,25 @@
+<div class="edit-dialog-container">
+    <h2 mat-dialog-title>Edit Periodic Element</h2>
+    <mat-dialog-content>
+        <form [formGroup]="editForm" class="form-container">
+            <mat-form-field class="form-field">
+                <mat-label>{{ 'Name' }}</mat-label>
+                <input matInput formControlName="name">
+            </mat-form-field>
+
+            <mat-form-field class="form-field">
+                <mat-label>{{ 'Weight' }}</mat-label>
+                <input matInput formControlName="weight">
+            </mat-form-field>
+
+            <mat-form-field class="form-field">
+                <mat-label>{{ 'Symbol' }}</mat-label>
+                <input matInput formControlName="symbol">
+            </mat-form-field>
+        </form>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+        <button mat-button (click)="cancel()">Cancel</button>
+        <button mat-button [disabled]="!editForm.valid" (click)="save()">Save</button>
+    </mat-dialog-actions>
+</div>
