@@ -68,7 +68,6 @@ export class PeriodicElementsListComponent implements OnInit  {
       PeriodicElementEditComponent
     )
       .subscribe((dataSource):  void => {
-        this.periodicElementsService.setPeriodicElements(dataSource.data)
         this.dataSource = dataSource;
       });
   }

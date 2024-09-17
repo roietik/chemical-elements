@@ -34,8 +34,4 @@ export class PeriodicElementsService {
         delay(2000)
       );
   }
-
-  setPeriodicElements(elements: PeriodicElement[]): void {
-    this.subjectPeriodicElements.next(elements);
-  }
 }
