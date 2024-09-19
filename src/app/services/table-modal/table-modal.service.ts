@@ -7,12 +7,12 @@ import {MatTableDataSource} from '@angular/material/table';
 @Injectable({
   providedIn: 'root'
 })
-export class DialogService  {
+export class TableModalService {
   constructor(
     public readonly dialog: MatDialog
   ) {
   }
-  openDialog<TComponent, TElement>(
+  openModal<TComponent, TElement>(
     element: TElement,
     elements: TElement[],
     component: ComponentType<TComponent>
